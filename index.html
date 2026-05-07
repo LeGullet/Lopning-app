@@ -565,6 +565,352 @@ width:100%;
 box-sizing:border-box;
 }
 
+
+/* ===== PREMIUM REDESIGN LAYER ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root{
+--premium-bg:#050816;
+--premium-bg2:#0b1226;
+--premium-card:rgba(12,18,38,0.72);
+--premium-border:rgba(90,120,255,0.16);
+--premium-glow:rgba(72,255,145,0.28);
+--premium-text:#eef4ff;
+--premium-muted:#9caecc;
+--premium-green:#78ff4d;
+--premium-blue:#4da3ff;
+--premium-purple:#8b5cf6;
+}
+
+body{
+background:
+radial-gradient(circle at top left, rgba(52,211,153,0.10), transparent 25%),
+radial-gradient(circle at top right, rgba(59,130,246,0.18), transparent 28%),
+radial-gradient(circle at bottom right, rgba(139,92,246,0.12), transparent 30%),
+linear-gradient(145deg,#020617 0%,#071122 40%,#09152b 100%) !important;
+color:var(--premium-text) !important;
+font-family:'Inter',sans-serif !important;
+padding:24px !important;
+}
+
+body::before{
+content:"";
+position:fixed;
+inset:0;
+pointer-events:none;
+background:
+linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+background-size:40px 40px;
+opacity:0.35;
+}
+
+h1{
+font-size:58px !important;
+font-weight:900 !important;
+letter-spacing:-2px !important;
+background:linear-gradient(90deg,#ffffff,#9eff5d 55%,#4da3ff 100%) !important;
+-webkit-background-clip:text !important;
+-webkit-text-fill-color:transparent !important;
+margin-bottom:12px !important;
+}
+
+h2,h3,label,p,th,td{
+color:var(--premium-text) !important;
+}
+
+.hero-banner{
+position:relative !important;
+background:
+linear-gradient(120deg, rgba(4,12,30,0.92), rgba(14,32,64,0.86)),
+url('https://images.unsplash.com/photo-1552674605-db6ffd4facb5?q=80&w=1600&auto=format&fit=crop') center/cover !important;
+border:1px solid rgba(120,255,77,0.16) !important;
+box-shadow:
+0 0 0 1px rgba(255,255,255,0.03),
+0 30px 60px rgba(0,0,0,0.45),
+0 0 60px rgba(72,255,145,0.10) !important;
+padding:48px !important;
+border-radius:34px !important;
+overflow:hidden !important;
+}
+
+.hero-banner::after{
+content:"";
+position:absolute;
+inset:0;
+background:linear-gradient(90deg, rgba(0,0,0,0.15), transparent);
+pointer-events:none;
+}
+
+.hero-text h2{
+font-size:54px !important;
+font-weight:900 !important;
+line-height:1 !important;
+margin-bottom:16px !important;
+text-transform:uppercase;
+}
+
+.hero-text p{
+font-size:18px !important;
+color:#d5def0 !important;
+max-width:680px !important;
+}
+
+.tabs{
+display:grid !important;
+grid-template-columns:repeat(3,1fr);
+gap:18px !important;
+margin-top:24px !important;
+}
+
+.tab-btn{
+background:rgba(16,25,49,0.82) !important;
+border:1px solid rgba(255,255,255,0.06) !important;
+backdrop-filter:blur(18px) !important;
+border-radius:22px !important;
+padding:18px 20px !important;
+font-size:17px !important;
+font-weight:800 !important;
+color:#b9cae9 !important;
+box-shadow:
+inset 0 1px 0 rgba(255,255,255,0.04),
+0 15px 30px rgba(0,0,0,0.28) !important;
+}
+
+.tab-btn:hover{
+transform:translateY(-4px) !important;
+border-color:rgba(120,255,77,0.22) !important;
+box-shadow:
+0 0 0 1px rgba(120,255,77,0.08),
+0 18px 40px rgba(0,0,0,0.38),
+0 0 25px rgba(120,255,77,0.10) !important;
+}
+
+.active{
+background:
+linear-gradient(135deg, rgba(120,255,77,0.14), rgba(0,0,0,0.25)),
+rgba(16,25,49,0.92) !important;
+color:#a8ff67 !important;
+border-color:rgba(120,255,77,0.34) !important;
+box-shadow:
+0 0 0 1px rgba(120,255,77,0.12),
+0 0 30px rgba(120,255,77,0.16),
+0 20px 45px rgba(0,0,0,0.35) !important;
+}
+
+.card{
+background:linear-gradient(180deg, rgba(10,17,34,0.92), rgba(7,13,28,0.92)) !important;
+border:1px solid rgba(255,255,255,0.06) !important;
+border-radius:30px !important;
+padding:28px !important;
+box-shadow:
+0 0 0 1px rgba(255,255,255,0.02),
+0 20px 40px rgba(0,0,0,0.38),
+0 0 45px rgba(59,130,246,0.08) !important;
+overflow:hidden !important;
+}
+
+.card::before{
+height:3px !important;
+background:linear-gradient(90deg,#78ff4d,#4da3ff,#8b5cf6) !important;
+}
+
+.card:hover{
+transform:translateY(-6px) !important;
+}
+
+.grid{
+gap:22px !important;
+}
+
+input,select{
+background:rgba(255,255,255,0.04) !important;
+border:1px solid rgba(255,255,255,0.08) !important;
+color:#ffffff !important;
+border-radius:18px !important;
+backdrop-filter:blur(14px) !important;
+box-shadow:
+inset 0 1px 0 rgba(255,255,255,0.03),
+0 10px 24px rgba(0,0,0,0.18) !important;
+}
+
+input::placeholder{
+color:#94a3b8 !important;
+}
+
+input:focus,
+select:focus{
+border-color:rgba(120,255,77,0.55) !important;
+box-shadow:
+0 0 0 4px rgba(120,255,77,0.10),
+0 0 22px rgba(120,255,77,0.14) !important;
+background:rgba(255,255,255,0.06) !important;
+}
+
+button{
+background:linear-gradient(135deg,#7cff5b,#4dc7ff) !important;
+color:#04111f !important;
+font-weight:900 !important;
+border-radius:18px !important;
+letter-spacing:0.2px;
+box-shadow:
+0 12px 30px rgba(72,255,145,0.22),
+0 0 30px rgba(72,255,145,0.10) !important;
+}
+
+button:hover{
+transform:translateY(-3px) scale(1.02) !important;
+}
+
+.secondary-btn{
+background:linear-gradient(135deg,#2d3748,#475569) !important;
+color:#e2e8f0 !important;
+}
+
+.goal-bar{
+background:rgba(255,255,255,0.06) !important;
+height:26px !important;
+border-radius:999px !important;
+overflow:hidden !important;
+}
+
+.goal-fill{
+background:linear-gradient(90deg,#78ff4d,#4da3ff,#8b5cf6) !important;
+box-shadow:0 0 25px rgba(120,255,77,0.35) !important;
+}
+
+canvas{
+background:
+linear-gradient(180deg, rgba(12,19,37,0.96), rgba(9,15,30,0.96)) !important;
+border:1px solid rgba(255,255,255,0.05) !important;
+border-radius:26px !important;
+}
+
+table{
+background:rgba(10,17,34,0.92) !important;
+border:1px solid rgba(255,255,255,0.05) !important;
+}
+
+th{
+background:rgba(255,255,255,0.03) !important;
+color:#9eff5d !important;
+text-transform:uppercase;
+letter-spacing:0.5px;
+}
+
+tr{
+transition:all 0.25s ease;
+}
+
+tr:hover{
+background:rgba(120,255,77,0.06) !important;
+}
+
+td{
+color:#d9e4ff !important;
+border-bottom:1px solid rgba(255,255,255,0.04) !important;
+}
+
+.action-btn{
+padding:10px 14px !important;
+font-size:13px !important;
+border-radius:14px !important;
+}
+
+#dashboardTab .card:first-child{
+position:relative;
+}
+
+#dashboardTab .card:first-child::after{
+content:"";
+position:absolute;
+top:-80px;
+right:-80px;
+width:240px;
+height:240px;
+background:radial-gradient(circle, rgba(77,163,255,0.20), transparent 70%);
+pointer-events:none;
+}
+
+@media(max-width:1024px){
+h1{
+font-size:44px !important;
+}
+
+.hero-text h2{
+font-size:42px !important;
+}
+
+.tabs{
+grid-template-columns:1fr !important;
+}
+}
+
+@media(max-width:768px){
+
+body{
+padding:14px !important;
+}
+
+.hero-banner{
+padding:28px !important;
+border-radius:26px !important;
+}
+
+.hero-text h2{
+font-size:34px !important;
+}
+
+.hero-text p{
+font-size:16px !important;
+}
+
+h1{
+font-size:36px !important;
+}
+
+.card{
+padding:20px !important;
+border-radius:24px !important;
+}
+
+button{
+width:100% !important;
+margin-bottom:10px !important;
+}
+
+table{
+display:block !important;
+overflow-x:auto !important;
+}
+}
+
+
+/* ===== DATE PICKER VISIBILITY FIX ===== */
+
+input[type="date"]{
+color-scheme: dark;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator{
+filter: brightness(0) invert(1);
+cursor: pointer;
+opacity: 1;
+}
+
+
+/* ===== DELETE BUTTON FIX ===== */
+
+.action-btn{
+color:#04111f !important;
+min-width:90px;
+}
+
+.action-btn:hover{
+opacity:0.92;
+}
+
 </style>
 
 
@@ -573,6 +919,9 @@ box-sizing:border-box;
 <body>
 
 <h1>Löpning Dashboard</h1>
+<p style="margin-top:0;margin-bottom:26px;color:#a7b9d8;font-size:18px;font-weight:600;">
+Följ din träning. Bygg progression. Nå dina mål.
+</p>
 
 
 <div class="hero-banner">
@@ -581,7 +930,7 @@ box-sizing:border-box;
 
 <div class="hero-text">
 
-<h2>Fortsätt framåt 🏃</h2>
+<h2>Fortsätt framåt</h2>
 
 <p>
 Bygg din progression pass för pass och följ din resa mot 25 minuter.
@@ -589,9 +938,7 @@ Bygg din progression pass för pass och följ din resa mot 25 minuter.
 
 </div>
 
-<div class="hero-icons">
-🔥 ⚡ 🏅
-</div>
+
 
 </div>
 
@@ -1321,13 +1668,13 @@ function drawChart(){
     ctx.fillStyle = "#2f6fc2";
     ctx.fillRect(280,285,30,4);
 
-    ctx.fillStyle = "#111";
+    ctx.fillStyle = "#ffffff";
     ctx.fillText("Löptid (min)",390,290);
 
     ctx.fillStyle = "#c94a4a";
     ctx.fillRect(500,285,30,4);
 
-    ctx.fillStyle = "#111";
+    ctx.fillStyle = "#ffffff";
     ctx.fillText("Distans (km)",610,290);
 }
 
